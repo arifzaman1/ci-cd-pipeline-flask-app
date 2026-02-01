@@ -29,7 +29,7 @@ pipeline {
             }
         }
 
-        STAGE('Run Container') {
+        stage('Run Container') {
             steps {
                 script {
                     // Stop any existing container
@@ -44,7 +44,7 @@ pipeline {
         success {
             echo 'Pipeline completed successfully!'
         }
-        faliure {
+        failure {
             echo 'Pipeline failed. Check logs!'
         }
     }
